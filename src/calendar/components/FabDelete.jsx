@@ -8,7 +8,6 @@ export const FabDelete = () => {
 		startDeletingEvent();
 	};
 
-	console.log(isDateModalOpen);
 	return (
 		<button
 			onClick={handleDelete}
