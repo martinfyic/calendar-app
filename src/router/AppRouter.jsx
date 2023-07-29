@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { LoginPage } from '../auth';
-import { CalendarPage } from '../calendar';
+import { CalendarPage, Loading } from '../calendar';
 import { useAuthStore } from '../hooks';
 
 export const AppRouter = () => {
@@ -12,7 +12,7 @@ export const AppRouter = () => {
 	}, []);
 
 	if (status === 'checking') {
-		return <h3>Loading...</h3>;
+		return <Loading />;
 	}
 	return (
 		<Routes>
